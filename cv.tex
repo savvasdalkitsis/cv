@@ -1,0 +1,204 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% http://www.ctan.org/tex-archive/macros/latex/contrib/moderncv/
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Savvas}
+\familyname{Dalkitsis}
+\title{Mobile Software Engineer}               % optional, remove the line if not wanted
+\address{10 Orchid Street}{W12 0SY, London, Hammersmith}    % optional, remove the line if not wanted
+\mobile{+44 7903432695}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if not wanted
+\email{savvas.dalkitsis@gmail.com}                          % optional, remove the line if not wanted
+\homepage{www.savvasdalkitsis.com}                    % optional, remove the line if not wanted
+\extrainfo{Skype: savvas.dalkitsis}            % optional, remove the line if not wanted
+\photo[64pt][0.0pt]{picture}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2003--2009}{Bachelor-Science (Mathematics)}{Aristotle University of Thessaloniki}{Greece}{\textit{}}{}  % arguments 3 to 6 can be left empty
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+\section{Experience}
+\cventry
+  {04/2011--Now}
+  {Mobile Software Engineer (Android)}
+  {\href{www.shazam.com}{Shazam Entertainment}}
+  {London}
+  {}
+  {  
+    Maintenance, design and implementation of new features on the Android client.\newline{}%
+    Features implemented by me include:
+    \begin{itemize}%
+    \item A new, more robust, object oriented, audio recording sub-system.
+    \item Rewriting of the 'tagging' (recognition process) sub-system using an async-state machine. 
+    \item Preview playback for tagged songs using Android's media playback capabilities.
+    \item Demonstrated, as part of the company's 'hack day', an NFC/Android Beam based way of sharing a user's tags, which made it to the final product.
+    \item Mocked up various tablet designs for demonstration to partners.
+    \item 3D lyrics visualizations for the product's LyricPlay\texttrademark  feature (written in C++)
+    \end{itemize}
+    Employed Test Driven Development to implement features in the client.\newline{}%
+    Forked and contributed to android open source project \href{https://github.com/shazam/robolectric}{Robolectic}\newline{}%
+    \emph{Technologies used: \textbf{Java, Android, Maven, git, SQLite, TDD, C++, regex}}\newline{}%
+    \emph{Supporting software used: \textbf{IntelliJ, Bamboo, Jira, Fisheye}}
+  }
+
+\cventry
+  {01/2009--04/2011}
+  {Software Engineer}
+  {\href{www.hamptondata.com}{Hampton Data Services}}
+  {London}
+  {}
+  {  
+    Maintenance and implementation of new features on the company flagship product "HDGeoscope", a GIS based information management solution targeted at companies in the Oil and Gas Industry.
+    \newline{}%
+    \begin{itemize}%
+    \item Created an automated installation solution for "HDGeoscope" that manages the silent installation of many subcomponents such as MS SQL Server 2008 and its prerequisites as well as automatically setting it up for end use.
+    \item Migrated source control from the outdated Microsoft Visual SourceSafe (VSS) to SVN and trained other developers on its usage.
+    \item Modernised deployment process by setting up Continuous Integration and one click delivery from source to final product (DVD)
+    \item Completed sub-projects inside "HDGeoscope" include:
+      \begin{itemize}%
+      \item Creating a new, modern map navigation interface to replace the old one and bring it closer to the industry standards (changes include Google maps - like navigation by panning and interactive zooming)
+      \item A geo-referencing system for placing images on the map
+      \item Implementing a chart based information system that is integrated into the GIS map.
+      \item Created a job scheduling sub-system that allows users across the network to create recurring jobs on the server.
+      \item Several GUI improvements such as changing the look and feel of the application and implementing a more flexible layout system for its components.
+      \end{itemize}
+    \end{itemize}
+    \emph{Technologies used: \textbf{Java, Swing, NSIS, Ant, SVN, cron, SQL, regex}}\newline{}%
+    \emph{Supporting software used: \textbf{eclipse, MS SQL Server}}
+  }
+  
+\cventry
+  {06/2008--01/2009}
+  {Systems Administrator}
+  {\href{www.eglobal.gr}{eGlobal Internet Stations}}
+  {Thessaloniki}
+  {}
+  {
+    Responsibilities:%
+    \begin{itemize}%
+    \item Daily management of a network of 70 computer stations
+    \item Hardware and software troubleshooting
+    \item System maintenance
+    \item Assistance to users
+    \end{itemize}
+  }
+
+\section{Programming/Scripting Languages}
+\cvitemwithcomment{Java}{8 years}{}
+\cvitemwithcomment{Pascal}{3 years}{}
+\cvitemwithcomment{NSIS}{1 year}{}
+\cvitemwithcomment{MS Visual Basic}{1 year}{}
+\cvitemwithcomment{Haskell}{novice/academic interest}{}
+\cvitemwithcomment{C++}{basic knowledge}{}
+\cvitemwithcomment{SQL}{basic knowledge}{MS SQL, SQLite flavours}
+
+\section{Computer skills}
+\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+\section{Interests}
+\cvitem{hobby 1}{Description}
+\cvitem{hobby 2}{Description}
+\cvitem{hobby 3}{Description}
+
+\section{Extra 1}
+\cvlistitem{Item 1}
+\cvlistitem{Item 2}
+\cvlistitem{Item 3}
+
+\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+\section{Extra 2}
+\cvlistdoubleitem{Item 1}{Item 4}
+\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+\cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                         % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
