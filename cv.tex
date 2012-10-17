@@ -21,7 +21,7 @@
 %\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
  % enabling footnotes.
-\usepackage{footmisc}
+\usepackage[bottom,norule]{footmisc}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -50,6 +50,9 @@
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
+
+\newcommand{\superscript}[1]{$^{#1}$}
+\newcommand{\urlfootnote}[2]{\footnotetext[#1]{\href{#2}{#2}}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -69,10 +72,10 @@
 \cventry
   {04/2011--Now}
   {Mobile Software Engineer (Android)}
-  {\href{www.shazam.com}{Shazam Entertainment}}
+  {\href{www.shazam.com}{Shazam Entertainment}\superscript{1}}
   {London}
   {}
-  {  
+  { 
     Maintenance, design and implementation of new features on the Android client.\newline{}%
     Features implemented by me include:
     \begin{itemize}%
@@ -84,15 +87,17 @@
     \item 3D lyrics visualizations for the product's LyricPlay\texttrademark  feature (written in C++)
     \end{itemize}
     Employed Test Driven Development to implement features in the client.\newline{}%
-    Forked and contributed to android open source project \href{https://github.com/shazam/robolectric}{Robolectic}\newline{}%
+    Forked and contributed to android open source project \href{https://github.com/shazam/robolectric}{Robolectic}\superscript{2}\newline{}%
     \emph{Technologies used: \textbf{Java, Android, Maven, git, SQLite, TDD, C++, regex}}\newline{}%
     \emph{Supporting software used: \textbf{IntelliJ, Bamboo, Jenkins,dri Jira, Fisheye}}
   }
+\urlfootnote{1}{http://www.shazam.com}
+\urlfootnote{2}{https://github.com/shazam/robolectric}
 
 \cventry
   {01/2009--04/2011}
   {Software Engineer}
-  {\href{www.hamptondata.com}{Hampton Data Services}}
+  {\href{www.hamptondata.com}{Hampton Data Services}\superscript{3}}
   {London}
   {}
   {  
@@ -114,11 +119,12 @@
     \emph{Technologies used: \textbf{Java, Swing, NSIS, Ant, SVN, cron, SQL, regex}}\newline{}%
     \emph{Supporting software used: \textbf{eclipse, MS SQL Server}}
   }
+\urlfootnote{3}{http://www.hamptondata.com}
   
 \cventry
   {06/2008--01/2009}
   {Systems Administrator}
-  {\href{www.eglobal.gr}{eGlobal Internet Stations}}
+  {\href{www.eglobal.gr}{eGlobal Internet Stations}\superscript{4}}
   {Thessaloniki}
   {}
   {
@@ -130,6 +136,7 @@
     \item Assistance to users
     \end{itemize}
   }
+\urlfootnote{4}{http://www.eglobal.gr}
 
 \section{Programming/Scripting Languages}
 \cvitemwithcomment{Java}{8 years}{}
