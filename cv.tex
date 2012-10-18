@@ -53,6 +53,16 @@
 
 \newcommand{\superscript}[1]{$^{#1}$}
 \newcommand{\urlfootnote}[2]{\footnotetext[#1]{\href{#2}{#2}}}
+
+
+\newcommand{\personalproject}[5]{
+\cventry
+  {#1}
+  {#2}
+  {}{}{}
+  {\href{#4}{#3}\superscript{#5}}
+  \urlfootnote{#5}{#4}
+}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -89,7 +99,7 @@
     Employed Test Driven Development to implement features in the client.\newline{}%
     Forked and contributed to android open source project \href{https://github.com/shazam/robolectric}{Robolectic}\superscript{2}\newline{}%
     \emph{Technologies used: \textbf{Java, Android, Maven, git, SQLite, TDD, C++, regex}}\newline{}%
-    \emph{Supporting software used: \textbf{IntelliJ, Bamboo, Jenkins,dri Jira, Fisheye}}
+    \emph{Supporting software used: \textbf{IntelliJ, Bamboo, Jenkins, Jira, Fisheye}}
   }
 \urlfootnote{1}{http://www.shazam.com}
 \urlfootnote{2}{https://github.com/shazam/robolectric}
@@ -146,6 +156,56 @@
 \cvitemwithcomment{Haskell, Clojure}{novice/academic interest}{}
 \cvitemwithcomment{C++}{basic knowledge}{}
 \cvitemwithcomment{SQL}{basic knowledge}{MS SQL, SQLite flavours}
+
+
+\section{Selected Personal Projects (available online)}
+\personalproject
+  {The Movie Database}
+  {
+    An Android front-end to "The Movie Database" at \href{http://www.themoviedb.org}{http://www.themoviedb.org}. 
+    Currently, it has just over 10.000 downloads
+  }
+  {Play Store Link}{https://play.google.com/store/apps/details?id=com.savvasdalkitsis.tmdb}
+  {5}
+\personalproject
+  {JTMDB}
+  {A Java wrapper library for The Movie Database, an online repository for information about Movies}
+  {GitHub page}{https://github.com/savvasdalkitsis/JTMDB}
+  {6}
+\personalproject
+  {Joperties}
+  {
+    An extension to the Java Properties class. It exists to solve a common problem with Properties (all Properties are Strings).
+    Joperties allows you to set and get Java Objects without worrying about the transformation between String/Object
+  }
+  {Sourceforge page}{http://joperties.sourceforge.net}
+  {7}
+\personalproject
+  {JColorPicker}
+  {
+    An extremely simple desktop color picker. It allows you to select any color visible on your screen and copy its RGB code to the
+    clipboard all done in one simple click and drag motion
+  }
+  {Sourceforge page}{http://jcolorpicker.sourceforge.net}
+  {8}
+\personalproject
+  {JScreenGrabber}
+  {A quick-to-use screen capture utility. It allows you to save parts of your screen to png files with one click} 
+  {Sourceforge page}{http://jscreengrabber.sourceforge.net}
+  {9}
+\personalproject
+  {InstallBuddy (Visual Basic .NET)}
+  {
+    InstallBuddy is designed to organize your installers into one easy-to-use interface. Its intended use is
+    in an autorun CD/DVD
+  }
+  {Sourceforge page}{http://installbuddy.sourceforge.net}
+  {10}
+\personalproject
+  {JMinesweeper}
+  {A Java implementation of the well known puzzle game minesweeper}
+  {Sourceforge page}{http://jminesweeper.sourceforge.net}
+  {11}
 
 \section{Computer skills}
 \cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
