@@ -54,15 +54,30 @@
 \newcommand{\superscript}[1]{$^{#1}$}
 \newcommand{\urlfootnote}[2]{\footnotetext[#1]{\href{#2}{#2}}}
 
-
-\newcommand{\personalproject}[5]{
+\newcommand{\personalproject}[4]{
 \cventry
   {#1}
   {#2}
   {}{}{}
-  {\href{#4}{#3}\superscript{#5}}
-  \urlfootnote{#5}{#4}
+  {\href{#4}{#3}(\href{#4}{#4})}
 }
+  
+\newcommand{\relevantachievement}[5]{
+\cventry
+  {#1}
+  {#2}
+  {(\href{#3}{#3})}
+  {#4}
+  {}
+  {#5}
+  {}
+}
+
+\newcommand{\conference}[3]{
+\cvitem{#1}{#2 (\href{#3}{#3})}
+}
+
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -166,12 +181,10 @@
     Currently, it has just over 10.000 downloads
   }
   {Play Store Link}{https://play.google.com/store/apps/details?id=com.savvasdalkitsis.tmdb}
-  {5}
 \personalproject
   {JTMDB}
   {A Java wrapper library for The Movie Database, an online repository for information about Movies}
   {GitHub page}{https://github.com/savvasdalkitsis/JTMDB}
-  {6}
 \personalproject
   {Joperties}
   {
@@ -179,7 +192,6 @@
     Joperties allows you to set and get Java Objects without worrying about the transformation between String/Object
   }
   {Sourceforge page}{http://joperties.sourceforge.net}
-  {7}
 \personalproject
   {JColorPicker}
   {
@@ -187,12 +199,10 @@
     clipboard all done in one simple click and drag motion
   }
   {Sourceforge page}{http://jcolorpicker.sourceforge.net}
-  {8}
 \personalproject
   {JScreenGrabber}
   {A quick-to-use screen capture utility. It allows you to save parts of your screen to png files with one click} 
   {Sourceforge page}{http://jscreengrabber.sourceforge.net}
-  {9}
 \personalproject
   {InstallBuddy (Visual Basic .NET)}
   {
@@ -200,27 +210,33 @@
     in an autorun CD/DVD
   }
   {Sourceforge page}{http://installbuddy.sourceforge.net}
-  {10}
 \personalproject
   {JMinesweeper}
   {A Java implementation of the well known puzzle game minesweeper}
   {Sourceforge page}{http://jminesweeper.sourceforge.net}
-  {11}
   
 \section{Relevant Achievements}
-\cventry
+\relevantachievement
+  {06-07-2012}
+  {Youtube/GTV hackathon}
+  {http://ythacklon.appspot.com/}
+  {London}
+  {Attended and was part of a winning team in the Google weekend Youtube/GoogleTV hackathon.}
+\relevantachievement
   {2003}
   {Panhellenic Informatics Contest}
-  {(\href{http://www.epy.gr}{http://www.epy.gr})}
+  {http://www.epy.gr}
   {Athens}
-  {}
   {
     5\superscript{th} place, which also qualified me as the 1\superscript{st} runner-up for the International Olympiad in Informatics 2003
     \href{http://www.ioinformatics.org}{(http://www.ioinformatics.org)}
   }
-  {}
 
-
+\section{Relevant Conferences Attended}
+\conference{27-06-2012}{GoogleIO}{https://developers.google.com/events/io}
+\conference{13-02-2012}{JFokus}{http://www.jfokus.se}
+\conference{06-10-2011}{Droidcon}{http://uk.droidcon.com}
+\conference{07-10-2010}{Java2Days}{http://java2days.com}
 
 \section{Computer skills}
 \cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
