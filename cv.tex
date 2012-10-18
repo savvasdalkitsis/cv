@@ -59,7 +59,7 @@
   {#1}
   {#2}
   {}{}{}
-  {\href{#4}{#3}(\href{#4}{#4})}
+  {\href{#4}{#3} (\href{#4}{#4})}
 }
   
 \newcommand{\achievement}[5]{
@@ -87,7 +87,7 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2003--2009}{Bachelor-Science (Mathematics)}{Aristotle University of Thessaloniki}{Greece}{\textit{}}{}  % arguments 3 to 6 can be left empty
+\cventry{2003--2009}{Bachelor-Science (Mathematics)}{Aristotle University of Thessaloniki}{Greece}{}{}  % arguments 3 to 6 can be left empty
 
 %\section{Master thesis}
 %\cvitem{title}{\emph{Title}}
@@ -119,6 +119,7 @@
 \urlfootnote{1}{http://www.shazam.com}
 \urlfootnote{2}{https://github.com/shazam/robolectric}
 
+
 \cventry
   {01/2009--04/2011}
   {Software Engineer}
@@ -132,19 +133,29 @@
     \item Created an automated installation solution for "HDGeoscope" that manages the silent installation of many subcomponents such as MS SQL Server 2008 and its prerequisites as well as automatically setting it up for end use.
     \item Migrated source control from the outdated Microsoft Visual SourceSafe (VSS) to SVN and trained other developers on its usage.
     \item Modernised deployment process by setting up Continuous Integration and one click delivery from source to final product (DVD)
-    \item Completed sub-projects inside "HDGeoscope" include:
-      \begin{itemize}%
-      \item Creating a new, modern map navigation interface to replace the old one and bring it closer to the industry standards (changes include Google maps - like navigation by panning and interactive zooming)
-      \item A geo-referencing system for placing images on the map
-      \item Implementing a chart based information system that is integrated into the GIS map.
-      \item Created a job scheduling sub-system that allows users across the network to create recurring jobs on the server.
-      \item Several GUI improvements such as changing the look and feel of the application and implementing a more flexible layout system for its components.
-      \end{itemize}
     \end{itemize}
-    \emph{Technologies used: \textbf{Java, Swing, NSIS, Ant, SVN, cron, SQL, regex}}\newline{}%
-    \emph{Supporting software used: \textbf{eclipse, MS SQL Server}}
   }
 \urlfootnote{3}{http://www.hamptondata.com}
+
+% There is a page break and according to the creator of moderncv, there is no automatic way to break a cventry. So the solution
+% he offers is to break the entry into separate cventry/cvitem parts.
+
+\cvitem{}{
+  \begin{itemize}%
+  \item Completed sub-projects inside "HDGeoscope" include:
+    \begin{itemize}%
+    \item Creating a new, modern map navigation interface to replace the old one and bring it closer to the industry standards
+          (changes include Google maps - like navigation by panning and interactive zooming)
+    \item A geo-referencing system for placing images on the map
+    \item Implementing a chart based information system that is integrated into the GIS map.
+    \item Created a job scheduling sub-system that allows users across the network to create recurring jobs on the server.
+    \item Several GUI improvements such as changing the look and feel of the application and implementing a more flexible layout
+          system for its components.
+    \end{itemize}
+  \end{itemize}
+  \emph{Technologies used: \textbf{Java, Swing, NSIS, Ant, SVN, cron, SQL, regex}}\newline{}%
+  \emph{Supporting software used: \textbf{eclipse, MS SQL Server}}
+}
   
 \cventry
   {06/2008--01/2009}
@@ -238,34 +249,31 @@
 \conference{06-10-2011}{Droidcon}{http://uk.droidcon.com}
 \conference{07-10-2010}{Java2Days}{http://java2days.com}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\section{Languages}
+\cvitem{Greek}{Native}
+\cvitem{English}
+  {
+    Excellent command as certified by:
+    \begin{itemize}
+    \item University of Cambridge - Certificate of Proficiency in English
+    \item University of Michigan - Certificate of Proficiency in English
+    \end{itemize}
+  }
 
-\section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3}
-
-\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{}
+\section{Personal Interests}
+\cvlistitem{New developments in digital technology.}
+\cvlistitem{3D modeling (3 years of experience with Autodesk 3D studio MAX)}
+\cvlistitem{Film post production (involved in editing, special effects and digital processing of 2 short films)}
+\cvlistitem{Astronomy}
+\cvlistitem{Natural Sciences literature}
+\cvlistitem{Climbing}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
