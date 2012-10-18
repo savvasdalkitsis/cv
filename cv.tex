@@ -57,11 +57,10 @@
 \newcommand{\urlfootnote}[2]{\footnotetext[#1]{\href{#2}{#2}}}
 
 \newcommand{\personalproject}[4]{
-\cventry
+\cvitem
   {#1}
-  {#2}
-  {}{}{}
-  {\href{#4}{#3} (\httplink{#4})}
+  {#2\newline{}
+  \href{#4}{#3} (\httplink{#4})}
 }
   
 \newcommand{\achievement}[5]{
@@ -96,7 +95,8 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2003--2009}{Bachelor-Science (Mathematics)}{Aristotle University of Thessaloniki}{Greece}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2003-2009}{Bachelor-Science (Mathematics)}{Aristotle University of Thessaloniki}{Greece}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2003}{A-Levels equivalent}{Drama}{Greece}{}{}
 
 %\section{Master thesis}
 %\cvitem{title}{\emph{Title}}
@@ -104,7 +104,7 @@
 %\cvitem{description}{Short thesis abstract}
 \section{Experience}
 \cventry
-  {04/2011--Now}
+  {04/2011-Now}
   {Mobile Software Engineer (Android)}
   {\href{www.shazam.com}{Shazam Entertainment}\superscript{1}}
   {London}
@@ -122,7 +122,7 @@
     \end{itemize}
     Employed Test Driven Development to implement features in the client.\newline{}%
     Forked and contributed to android open source project \href{https://github.com/shazam/robolectric}{Robolectic}\superscript{2}\newline{}%
-    \emph{Technologies used: \textbf{Java, Android, Maven, git, SQLite, TDD, C++, regex}}\newline{}%
+    \emph{Technologies used: \textbf{Java, Android, Maven, git, SQLite, TDD, C++, regex, JBehave}}\newline{}%
     \emph{Supporting software used: \textbf{IntelliJ, Bamboo, Jenkins, Jira, Fisheye}}
   }
   
@@ -130,7 +130,7 @@
 \urlfootnote{2}{https://github.com/shazam/robolectric}
 
 \cventry
-  {01/2009--04/2011}
+  {01/2009-04/2011}
   {Software Engineer}
   {\href{www.hamptondata.com}{Hampton Data Services}\superscript{3}}
   {London}
@@ -170,7 +170,7 @@
 }
   
 \cventry
-  {06/2008--01/2009}
+  {06/2008-01/2009}
   {Systems Administrator}
   {\href{www.eglobal.gr}{eGlobal Internet Stations}\superscript{4}}
   {Thessaloniki}
@@ -194,9 +194,10 @@
 \cvitem{Pascal}{3 years}
 \cvitem{NSIS}{1 year}
 \cvitem{MS Visual Basic}{1 year}
-\cvitem{Haskell, Clojure}{novice/academic interest}
 \cvitem{C++}{basic knowledge}
 \cvitem{SQL}{basic knowledge}
+\cvitem{LaTeX}{basic knowledge}
+\cvitem{Clojure, Scala}{novice/academic interest}
 
 
 \section{Selected Personal Projects (available online)}
@@ -204,46 +205,46 @@
   {The Movie Database}
   {
     An Android front-end to "The Movie Database" at \href{http://www.themoviedb.org}{http://www.themoviedb.org}. 
-    Currently, it has just over 10.000 downloads
+    Currently, it has just over 10.000 downloads.
   }
   {Play Store Link}{https://play.google.com/store/apps/details?id=com.savvasdalkitsis.tmdb}
 \personalproject
   {JTMDB}
-  {A Java wrapper library for The Movie Database, an online repository for information about Movies}
+  {A Java wrapper library for The Movie Database, an online repository for information about Movies.}
   {GitHub page}{https://github.com/savvasdalkitsis/JTMDB}
 \personalproject
   {Joperties}
   {
     An extension to the Java Properties class. It exists to solve a common problem with Properties (all Properties are Strings).
-    Joperties allows you to set and get Java Objects without worrying about serialization
+    Joperties allows you to set and get Java Objects without worrying about serialization.
   }
   {Sourceforge page}{http://joperties.sourceforge.net}
 \personalproject
   {JColorPicker}
   {
     An extremely simple desktop color picker. It allows you to select any color visible on your screen and copy its RGB code to the
-    clipboard all done in one simple click and drag motion
+    clipboard all done in one simple click and drag motion.
   }
   {Sourceforge page}{http://jcolorpicker.sourceforge.net}
 \personalproject
   {JScreenGrabber}
-  {A quick-to-use screen capture utility. It allows you to save parts of your screen to png files with one click} 
+  {A quick-to-use screen capture utility. It allows you to save parts of your screen to png files with one click.} 
   {Sourceforge page}{http://jscreengrabber.sourceforge.net}
 \personalproject
   {InstallBuddy (Visual Basic .NET)}
   {
     InstallBuddy is designed to organize your installers into one easy-to-use interface. Its intended use is
-    in an autorun CD/DVD
+    in an autorun CD/DVD.
   }
   {Sourceforge page}{http://installbuddy.sourceforge.net}
 \personalproject
   {JMinesweeper}
-  {A Java implementation of the well known puzzle game minesweeper}
+  {A Java implementation of the well known puzzle game minesweeper.}
   {Sourceforge page}{http://jminesweeper.sourceforge.net}
   
 \section{Relevant Achievements}
 \achievement
-  {06-07-2012}
+  {06/07/2012}
   {Youtube/GTV hackathon}
   {http://ythacklon.appspot.com/}
   {London}
@@ -259,10 +260,10 @@
   }
 
 \section{Relevant Conferences Attended}
-\conference{27-06-2012}{GoogleIO}{https://developers.google.com/events/io}
-\conference{13-02-2012}{JFokus}{http://www.jfokus.se}
-\conference{06-10-2011}{Droidcon}{http://uk.droidcon.com}
-\conference{07-10-2010}{Java2Days}{http://java2days.com}
+\conference{27/06/2012}{GoogleIO}{https://developers.google.com/events/io}
+\conference{13/02/2012}{JFokus}{http://www.jfokus.se}
+\conference{06/10/2011}{Droidcon}{http://uk.droidcon.com}
+\conference{07/10/2010}{Java2Days}{http://java2days.com}
 
 \section{Languages}
 \cvitem{Greek}{Native}
@@ -315,9 +316,6 @@ Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, c
 
 Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
 
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
 
 \makeletterclosing
 
