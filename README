@@ -1,0 +1,3 @@
+This is a LaTeX version of my CV.
+
+The folder texmf needs to be placed in the home directory and then the command 'texhash' must be run to allow the compilation of the document.
