@@ -1,14 +1,14 @@
 cv:
   name: Savvas Dalkitsis
-  location: Your Location
-  email: youremail@yourdomain.com
-  phone: tel:+90-541-999-99-99
-  website: https://yourwebsite.com/
+  location: London
+  email: kurosavvas@gmail.com
+  phone: tel:+44-7903432695
+  website: https://card.savvas.cloud
   social_networks:
     - network: LinkedIn
-      username: yourusername
+      username: savvasdalkitsis
     - network: GitHub
-      username: yourusername
+      username: savvasdalkitsis
   sections:
     welcome_to_RenderCV!:
       - '[RenderCV](https://github.com/sinaatalay/rendercv) is
